@@ -1,0 +1,30 @@
+site_name: bolus-wizard
+repo_url: https://github.com/bhjelmar/bolus-wizard
+site_url: https://bhjelmar.github.io/bolus-wizard
+site_description: Automatically calculate your optimal bolus.
+site_author: Brad Hjelmar
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+copyright: Maintained by Brad Hjelmar.
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: white
+    accent: blue
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
